@@ -112,9 +112,145 @@ padding:20px;
 background:#000;
 color:#aaa;
 }
-
 </style>
-</head>
+<style>
+ :root {
+  --gold: #D4AF37;
+  --black: #090909;
+  --card: #171717;
+}
+
+body {
+  background: var(--black);
+  color: #f5f5f5;
+  line-height: 1.8;
+}
+
+header {
+  background: #090909;
+  border-bottom: 1px solid rgba(212,175,55,.3);
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  color: var(--gold);
+  letter-spacing: 5px;
+  text-shadow: 0 0 18px rgba(212,175,55,.2);
+}
+
+.hero {
+  height: clamp(420px, 70vh, 650px);
+  background:
+    linear-gradient(110deg, rgba(0,0,0,.82), rgba(0,0,0,.4)),
+    url("images/hero.jpg") center/cover no-repeat;
+  border-bottom: 1px solid rgba(212,175,55,.25);
+  padding: 30px 20px;
+}
+
+.hero h1 {
+  color: var(--gold);
+  font-size: clamp(30px, 5vw, 52px);
+  line-height: 1.5;
+}
+
+.hero p {
+  color: #eee;
+  line-height: 2;
+  max-width: 760px;
+  margin: auto;
+}
+
+.container {
+  max-width: 1180px;
+  padding: 65px 22px;
+}
+
+.title {
+  color: var(--gold);
+  font-size: clamp(26px, 3vw, 36px);
+  margin-bottom: 35px;
+}
+
+.cards {
+  gap: 22px;
+  align-items: stretch;
+}
+
+.card {
+  background: linear-gradient(145deg, #202020, #101010);
+  border: 1px solid rgba(212,175,55,.3);
+  border-radius: 16px;
+  padding: 28px;
+  width: min(100%, 340px);
+  box-shadow: 0 12px 30px rgba(0,0,0,.3);
+  transition: .3s;
+}
+
+.card h3 {
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.card p {
+  color: #ddd;
+  line-height: 2;
+}
+
+.gallery {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border: 1px solid rgba(212,175,55,.3);
+  border-radius: 14px;
+}
+
+.contact {
+  max-width: 850px;
+  margin: 0 auto 40px;
+  padding: 30px 20px;
+  background: #141414;
+  border: 1px solid rgba(212,175,55,.3);
+  border-radius: 18px;
+  line-height: 2.2;
+}
+
+.contact p {
+  margin: 8px 0;
+}
+
+a {
+  color: var(--gold);
+}
+
+footer {
+  background: #050505;
+  border-top: 1px solid rgba(212,175,55,.3);
+  color: #bbb;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    height: 460px;
+  }
+
+  .container {
+    padding: 45px 16px;
+  }
+
+  .gallery img {
+    height: 220px;
+  }
+
+  .card {
+    width: 100%;
+  }
+}/head>
 
 <body>
 
